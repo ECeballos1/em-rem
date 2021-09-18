@@ -1,0 +1,77 @@
+/* Unidades EM y REM
+
+--> EM
+La medidas em corresponde al valor del font-size del elemento padre del elemento
+
+	se calcula::
+		px / font-size del padre
+
+--> REM 
+Tomando el tamaño del font-size del body
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f2f2f2;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+.contenedor {
+	background: #550a46;
+	color: #fff;
+	width: 90%;
+	max-width: 50em; /* 800px */
+	margin: 1.875em auto; /* 30px */
+	padding: 1.875em; /* 30px */
+	border-radius: 10px;
+
+	font-size: 1em; /* font-size del body  16px */
+}
+
+.contenedor h1 {
+	color: #f8b400;
+	margin-bottom: 1.25rem;
+	font-family: 'Merriweather', serif;
+	font-weight: normal;
+	font-size: 2em; /* font-size del elemento padre mas cercano (.contenedor) */ 
+}
+
+.contenedor p {
+	line-height: 200%;
+	margin-bottom: 1.25em; /* 20px */ 
+	font-size: 1em;
+}
+
+.contenedor button {
+	font-size: 1rem;
+	display: inline-block;
+	padding: 0.625em 1.25em; /* 10px 20px */
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	cursor: pointer;
+	background: #617be3;
+	color: #fff;
+	border-radius: 100px;
+	
+}
+
+/* ---- Media-queries ----- */
+
+@media screen and (max-width: 900px){
+	body {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 500px){
+	body {
+		font-size: 12px;
+	}
+}
